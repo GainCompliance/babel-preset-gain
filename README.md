@@ -1,5 +1,7 @@
 # babel-preset-gain
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/GainCompliance/babel-preset-gain.svg)](https://greenkeeper.io/)
+
 babel preset for our projects
 
 <!-- status badges -->
