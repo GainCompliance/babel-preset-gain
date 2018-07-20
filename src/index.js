@@ -15,7 +15,9 @@ export default function (context, {react, targets = {}, modules} = {}) {
     ].filter(Boolean),
     plugins: [
       [restSpread, {useBuiltIns: true}],
-      ...react ? [require('babel-plugin-transform-class-properties'), require('babel-plugin-inline-react-svg')] : []
+      ...react
+        ? [require('babel-plugin-transform-class-properties'), require('babel-plugin-inline-react-svg').default]
+        : []
     ]
   };
 }
