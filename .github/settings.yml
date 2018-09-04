@@ -23,3 +23,5 @@ labels:
     color: ffffff
   - name: greenkeeper
     color: 00c775
+  - name: breaking change
+    color: e0fc28
