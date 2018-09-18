@@ -3,8 +3,8 @@
 export default {
   input: 'src/index.js',
   external: [
-    'babel-preset-env',
-    'babel-plugin-transform-object-rest-spread'
+    '@babel/preset-env',
+    '@babel/plugin-proposal-object-rest-spread'
   ],
   output: [
     {file: 'lib/index.cjs.js', format: 'cjs', sourcemap: true},

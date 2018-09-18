@@ -1,5 +1,5 @@
-import env from 'babel-preset-env';
-import restSpread from 'babel-plugin-transform-object-rest-spread';
+import env from '@babel/preset-env';
+import restSpread from '@babel/plugin-proposal-object-rest-spread';
 
 export default function (context, {react, targets = {}, modules} = {}) {
   return {
@@ -11,12 +11,12 @@ export default function (context, {react, targets = {}, modules} = {}) {
           ...(false === modules) && {modules: false}
         }
       ),
-      react && require('babel-preset-react')
+      react && require('@babel/preset-react')
     ].filter(Boolean),
     plugins: [
       [restSpread, {useBuiltIns: true}],
       ...react
-        ? [require('babel-plugin-transform-class-properties'), require('babel-plugin-inline-react-svg').default]
+        ? [require('@babel/plugin-proposal-class-properties')]
         : []
     ]
   };
