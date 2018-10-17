@@ -143,7 +143,7 @@ $ npm test
 [license-link]: LICENSE
 [license-badge]: https://img.shields.io/github/license/GainCompliance/babel-preset-gain.svg
 [ci-link]: https://travis-ci.com/GainCompliance/babel-preset-gain
-[ci-badge]: https://img.shields.io/travis/GainCompliance/babel-preset-gain.svg?branch=master
+[ci-badge]: https://img.shields.io/travis/com/GainCompliance/babel-preset-gain.svg?branch=master
 [commit-convention-link]: https://conventionalcommits.org
 [commit-convention-badge]: https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg
 [commitizen-link]: http://commitizen.github.io/cz-cli/
