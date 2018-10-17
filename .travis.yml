@@ -4,6 +4,7 @@ notifications:
 branches:
   except:
   - "/^v\\d+\\.\\d+\\.\\d+$/"
+before_script: npm ls >/dev/null
 deploy:
   provider: script
   skip_cleanup: true
