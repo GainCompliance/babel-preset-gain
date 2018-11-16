@@ -52,7 +52,7 @@
     "@babel/preset-env": "^7.1.6",
     "@babel/preset-react": "^7.0.0",
     "babel-plugin-dynamic-import-node": "^2.2.0",
-    "babel-plugin-extensible-destructuring": "^4.2.3",
+    "babel-plugin-extensible-destructuring": "4.2.1",
     "babel-plugin-inline-react-svg": "^0.5.3"
   }
 }
