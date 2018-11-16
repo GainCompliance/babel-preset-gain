@@ -20,7 +20,7 @@ export default function (context, {react, targets = {}, modules} = {}) {
         ? [
           require('@babel/plugin-proposal-class-properties'),
           require('babel-plugin-inline-react-svg').default,
-          require('babel-plugin-extensible-destructuring').default
+          [require('babel-plugin-extensible-destructuring').default, {mode: 'optout', impl: 'immutable'}]
         ]
         : []
     ]
