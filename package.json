@@ -1,5 +1,5 @@
 {
-  "name": "babel-preset-gain",
+  "name": "@gaincompliance/babel-preset",
   "description": "babel preset for our projects",
   "version": "0.0.0-semantically-released",
   "main": "lib/index.cjs.js",

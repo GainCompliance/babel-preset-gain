@@ -30,7 +30,7 @@ babel preset for our projects
 ### Installation
 
 ```sh
-$ npm install babel-preset-gain --save-dev
+$ npm install @gaincompliance/babel-preset --save-dev
 ```
 
 ### Via [`.babelrc`](https://babeljs.io/docs/usage/babelrc/) for internal development purposes
@@ -40,7 +40,7 @@ features.
 
 ```json
 {
-  "presets": ["gain"]
+  "presets": ["@gaincompliance"]
 }
 ```
 
@@ -50,7 +50,7 @@ This will target the current node version, but will also transpile React feature
 
 ```json
 {
-  "presets": [["gain", {"react": true}]]
+  "presets": [["@gaincompliance", {"react": true}]]
 }
 ```
 
@@ -69,7 +69,7 @@ export default {
     babel({
       babelrc: false,
       exclude: ['./node_modules/**'],
-      presets: [['gain', {targets: {node: 8}, modules: false}]],
+      presets: [['@gaincompliance', {targets: {node: 8}, modules: false}]],
     }),
     ...
   ],
@@ -87,7 +87,7 @@ export default {
     babel({
       babelrc: false,
       exclude: ['./node_modules/**'],
-      presets: [['gain', {targets: {node: 8, browser: true}, modules: false}]],
+      presets: [['@gaincompliance', {targets: {node: 8, browser: true}, modules: false}]],
     }),
     ...
   ],
@@ -105,7 +105,7 @@ export default {
     babel({
       babelrc: false,
       exclude: ['./node_modules/**'],
-      presets: [['gain', {
+      presets: [['@gaincompliance', {
         targets: {node: 8, browser: true},
         react: true,
         modules: false
