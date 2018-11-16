@@ -1,11 +1,9 @@
 /* eslint import/no-extraneous-dependencies: ['error', {'devDependencies': true}] */
+import autoExternal from 'rollup-plugin-auto-external';
 
 export default {
   input: 'src/index.js',
-  external: [
-    'babel-preset-env',
-    'babel-plugin-transform-object-rest-spread'
-  ],
+  plugins: [autoExternal()],
   output: [
     {file: 'lib/index.cjs.js', format: 'cjs', sourcemap: true},
     {file: 'lib/index.es.js', format: 'es', sourcemap: true}
