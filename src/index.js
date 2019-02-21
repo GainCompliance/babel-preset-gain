@@ -11,7 +11,7 @@ export default function (context, {react, targets = {}, modules} = {}) {
           ...(false === modules) && {modules: false}
         }
       ],
-      react && require('@babel/preset-react')
+      ...react && [require('@babel/preset-react'), '@emotion/babel-preset-css-prop']
     ].filter(Boolean),
     plugins: [
       [restSpread, {useBuiltIns: true}],
@@ -20,7 +20,8 @@ export default function (context, {react, targets = {}, modules} = {}) {
         ? [
           require('@babel/plugin-proposal-class-properties'),
           require('babel-plugin-inline-react-svg').default,
-          [require('babel-plugin-extensible-destructuring').default, {mode: 'optout', impl: 'immutable'}]
+          [require('babel-plugin-extensible-destructuring').default, {mode: 'optout', impl: 'immutable'}],
+          'polished'
         ]
         : []
     ]
