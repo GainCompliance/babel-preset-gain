@@ -54,6 +54,14 @@ This will target the current node version, but will also transpile React feature
 }
 ```
 
+Optionally, also transpile immutable.js functionality
+
+```json
+{
+  "presets": [["@gaincompliance", {"react": true, "immutable": true}]]
+}
+```
+
 ### Via [Rollup](https://rollupjs.org)
 
 * Prevent transpilation of module imports/exports so `Rollup` can optimize properly
@@ -108,6 +116,29 @@ export default {
       presets: [['@gaincompliance', {
         targets: {node: 8, browser: true},
         react: true,
+        modules: false
+      }]],
+    }),
+    ...
+  ],
+  ...
+};
+
+```
+
+Optionally, also transform immutable.js functionality
+
+```js
+export default {
+  ...
+  plugins: [
+    babel({
+      babelrc: false,
+      exclude: ['./node_modules/**'],
+      presets: [['@gaincompliance', {
+        targets: {node: 8, browser: true},
+        react: true,
+        immutable: true,
         modules: false
       }]],
     }),
