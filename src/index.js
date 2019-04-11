@@ -2,7 +2,7 @@ import env from '@babel/preset-env';
 import restSpread from '@babel/plugin-proposal-object-rest-spread';
 import dynamicImport from 'babel-plugin-dynamic-import-node';
 
-export default function (context, {react, immutable, targets = {}, modules} = {}) {
+export default function (context, {react, immutable, emotion, targets = {}, modules} = {}) {
   return {
     presets: [
       [env,
@@ -11,7 +11,7 @@ export default function (context, {react, immutable, targets = {}, modules} = {}
           ...(false === modules) && {modules: false}
         }
       ],
-      ...react && [require('@babel/preset-react'), '@emotion/babel-preset-css-prop']
+      ...react && [require('@babel/preset-react'), ...(false !== emotion) ? ['@emotion/babel-preset-css-prop'] : []]
     ].filter(Boolean),
     plugins: [
       [restSpread, {useBuiltIns: true}],
