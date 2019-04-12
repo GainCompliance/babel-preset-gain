@@ -11,7 +11,9 @@ export default function (context, {react, immutable, emotion, targets = {}, modu
           ...(false === modules) && {modules: false}
         }
       ],
-      ...react && [require('@babel/preset-react'), ...(false !== emotion) ? ['@emotion/babel-preset-css-prop'] : []]
+      ...react
+        ? [require('@babel/preset-react'), ...(false !== emotion) ? ['@emotion/babel-preset-css-prop'] : []]
+        : []
     ].filter(Boolean),
     plugins: [
       [restSpread, {useBuiltIns: true}],
