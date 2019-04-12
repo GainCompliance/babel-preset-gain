@@ -147,6 +147,30 @@ export default {
   ...
 };
 
+
+```
+
+Optionally, disable transpilation of `emotion` (for unit testing, for example)
+
+```js
+export default {
+  ...
+  plugins: [
+    babel({
+      babelrc: false,
+      exclude: ['./node_modules/**'],
+      presets: [['@gaincompliance', {
+        targets: {node: 8, browser: true},
+        react: true,
+        emotion: false,
+        modules: false
+      }]],
+    }),
+    ...
+  ],
+  ...
+};
+
 ```
 
 <!-- contribution badges -->

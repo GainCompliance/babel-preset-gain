@@ -5,7 +5,8 @@ import dynamicImport from 'babel-plugin-dynamic-import-node';
 export default function (context, {react, immutable, emotion, targets = {}, modules} = {}) {
   return {
     presets: [
-      [env,
+      [
+        env,
         {
           targets: {node: targets.node || 'current', ...targets.browser && {browsers: ['last 2 versions']}},
           ...(false === modules) && {modules: false}
@@ -14,7 +15,7 @@ export default function (context, {react, immutable, emotion, targets = {}, modu
       ...react
         ? [require('@babel/preset-react'), ...(false !== emotion) ? ['@emotion/babel-preset-css-prop'] : []]
         : []
-    ].filter(Boolean),
+    ],
     plugins: [
       [restSpread, {useBuiltIns: true}],
       dynamicImport,
