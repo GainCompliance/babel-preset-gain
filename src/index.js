@@ -1,31 +1,17 @@
-import env from '@babel/preset-env';
-import restSpread from '@babel/plugin-proposal-object-rest-spread';
-import dynamicImport from 'babel-plugin-dynamic-import-node';
+import extendForm8ionPreset from '../thirdparty-wrappers/form8ion-babel-preset';
 
-export default function (context, {react, immutable, emotion, targets = {}, modules} = {}) {
+export default function (context, options = {}) {
+  const form8ionPreset = extendForm8ionPreset(context, options);
+  const {react, immutable, emotion} = options;
+
   return {
     presets: [
-      [
-        env,
-        {
-          targets: {node: targets.node || 'current', ...targets.browser && {browsers: ['last 2 versions']}},
-          ...(false === modules) && {modules: false}
-        }
-      ],
-      ...react
-        ? [require('@babel/preset-react'), ...(false !== emotion) ? ['@emotion/babel-preset-css-prop'] : []]
-        : []
+      ...form8ionPreset.presets,
+      ...react && false !== emotion ? ['@emotion/babel-preset-css-prop'] : []
     ],
     plugins: [
-      [restSpread, {useBuiltIns: true}],
-      dynamicImport,
-      ...react
-        ? [
-          require('@babel/plugin-proposal-class-properties'),
-          require('babel-plugin-inline-react-svg').default,
-          'polished'
-        ]
-        : [],
+      ...form8ionPreset.plugins,
+      ...react ? ['polished'] : [],
       ...immutable
         ? [[require('babel-plugin-extensible-destructuring').default, {mode: 'optout', impl: 'immutable'}]]
         : []

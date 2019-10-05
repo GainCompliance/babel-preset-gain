@@ -51,12 +51,8 @@
   },
   "dependencies": {
     "@babel/core": "^7.4.3",
-    "@babel/plugin-proposal-class-properties": "^7.4.0",
-    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
-    "@babel/preset-env": "^7.4.3",
-    "@babel/preset-react": "^7.0.0",
     "@emotion/babel-preset-css-prop": "^10.0.9",
-    "babel-plugin-dynamic-import-node": "^2.2.0",
+    "@form8ion/babel-preset": "1.6.0",
     "babel-plugin-extensible-destructuring": "^4.2.3",
     "babel-plugin-inline-react-svg": "^1.1.0",
     "babel-plugin-polished": "^1.1.0",
