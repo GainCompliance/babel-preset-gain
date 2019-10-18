@@ -7,7 +7,7 @@ branches:
 before_script: npm ls --production >/dev/null
 deploy:
   provider: script
-  skip_cleanup: true
+  edge: true
   script: npx semantic-release@beta
   on:
     all_branches: true
