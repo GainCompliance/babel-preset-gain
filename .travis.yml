@@ -4,7 +4,6 @@ notifications:
   email: false
 import:
   - source: GainCompliance/.travis-ci:authenticated-semantic-release.yml
-before_script: npm ls >/dev/null
 env:
   global:
   - FORCE_COLOR=1
