@@ -6,7 +6,6 @@ suite('react', () => {
     const config = buildConfig(null, {react: true});
 
     assert.include(config.presets, '@emotion/babel-preset-css-prop');
-    assert.include(config.plugins, require('babel-plugin-inline-react-svg').default);
     assert.include(config.plugins, 'polished');
   });
 
@@ -14,7 +13,6 @@ suite('react', () => {
     const config = buildConfig();
 
     assert.notInclude(config.presets, '@emotion/babel-preset-css-prop');
-    assert.notInclude(config.plugins, require('babel-plugin-inline-react-svg').default);
     assert.notInclude(config.plugins, 'polished');
   });
 
