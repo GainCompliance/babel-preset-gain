@@ -36,7 +36,7 @@
   "devDependencies": {
     "@babel/register": "^7.4.0",
     "@gaincompliance/eslint-config": "1.0.30",
-    "@gaincompliance/eslint-config-mocha": "1.0.7",
+    "@gaincompliance/eslint-config-mocha": "1.0.8",
     "chai": "^4.2.0",
     "codecov": "^3.6.2",
     "commitlint-config-gain": "^1.0.6",
