@@ -2,8 +2,11 @@
 
 babel preset for our projects
 
-<!-- status badges -->
+<!--status-badges start -->
+
 [![Build Status][ci-badge]][ci-link]
+
+<!--status-badges end -->
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -23,9 +26,12 @@ babel preset for our projects
 
 ## Usage
 
-<!-- consumer badges -->
+<!--consumer-badges start -->
+
 [![npm][npm-badge]][npm-link]
 [![MIT license][license-badge]][license-link]
+
+<!--consumer-badges end -->
 
 ### Installation
 
@@ -173,12 +179,15 @@ export default {
 
 ```
 
-<!-- contribution badges -->
+<!--contribution-badges start -->
+
 [![Conventional Commits][commit-convention-badge]][commit-convention-link]
 [![Commitizen friendly][commitizen-badge]][commitizen-link]
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
-[![Greenkeeper badge](https://badges.greenkeeper.io/GainCompliance/babel-preset-gain.svg)](https://greenkeeper.io/)
 [![PRs Welcome][PRs-badge]][PRs-link]
+[![Dependabot][dependabot-badge]][dependabot-link]
+
+<!--contribution-badges end -->
 
 ### Dependencies
 
@@ -194,14 +203,29 @@ $ npm test
 ```
 
 [npm-link]: https://www.npmjs.com/package/babel-preset-gain
+
 [npm-badge]: https://img.shields.io/npm/v/babel-preset-gain.svg
+
 [license-link]: LICENSE
+
 [license-badge]: https://img.shields.io/github/license/GainCompliance/babel-preset-gain.svg
+
 [ci-link]: https://travis-ci.com/GainCompliance/babel-preset-gain
+
 [ci-badge]: https://img.shields.io/travis/com/GainCompliance/babel-preset-gain.svg?branch=master
+
 [commit-convention-link]: https://conventionalcommits.org
+
 [commit-convention-badge]: https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg
+
 [commitizen-link]: http://commitizen.github.io/cz-cli/
+
 [commitizen-badge]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg
+
 [PRs-link]: http://makeapullrequest.com
+
 [PRs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg
+
+[dependabot-link]: https://dependabot.com/
+
+[dependabot-badge]: https://badgen.net/dependabot/GainCompliance/babel-preset-gain/?icon=dependabot
