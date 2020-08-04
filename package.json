@@ -54,7 +54,7 @@
   "dependencies": {
     "@babel/core": "^7.4.3",
     "@emotion/babel-preset-css-prop": "^10.0.9",
-    "@form8ion/babel-preset": "1.6.28",
+    "@form8ion/babel-preset": "1.6.29",
     "babel-plugin-extensible-destructuring": "^4.2.3",
     "babel-plugin-polished": "^1.1.0",
     "extensible-runtime": "^4.1.0"
