@@ -53,7 +53,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.4.3",
-    "@emotion/babel-preset-css-prop": "^10.0.9",
+    "@emotion/babel-preset-css-prop": "^11.0.0",
     "@form8ion/babel-preset": "1.6.36",
     "babel-plugin-extensible-destructuring": "^4.2.3",
     "babel-plugin-polished": "^1.1.0",
