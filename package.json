@@ -15,7 +15,7 @@
     "lint:travis": "travis-lint .travis.yml",
     "lint:peer": "npm ls >/dev/null",
     "test": "npm-run-all --print-label clean --parallel lint:* --parallel test:*",
-    "test:unit": "DEBUG=any mocha test/unit",
+    "test:unit": "DEBUG=any mocha test",
     "build": "run-s clean build:*",
     "build:js": "rollup -c",
     "watch": "run-s 'build:js -- --watch'",
@@ -57,9 +57,10 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.12.1",
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
-    "babel-plugin-inline-react-svg": "^1.1.2",
     "@emotion/babel-preset-css-prop": "^11.0.0",
+    "@travi/any": "^2.0.15",
     "babel-plugin-extensible-destructuring": "^4.2.3",
+    "babel-plugin-inline-react-svg": "^1.1.2",
     "babel-plugin-polished": "^1.1.0",
     "extensible-runtime": "^4.1.0"
   }
