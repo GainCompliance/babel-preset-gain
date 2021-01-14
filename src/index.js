@@ -1,20 +1,36 @@
-import extendForm8ionPreset from '../thirdparty-wrappers/form8ion-babel-preset';
+import env from '@babel/preset-env';
+import restSpread from '@babel/plugin-proposal-object-rest-spread';
 
-export default function (context, options = {}) {
-  const form8ionPreset = extendForm8ionPreset(context, options);
-  const {react, immutable, emotion} = options;
+export default function gainCompliancePreset(context, options = {}) {
+  const {react, immutable, emotion, targets = {}, modules = 'auto'} = options;
+
+  const envConfig = {
+    targets: {
+      node: targets.node || 'current',
+      ...targets.browser && {browsers: ['last 2 versions']}
+    },
+    modules,
+    exclude: ['transform-regenerator', 'transform-async-to-generator']
+  };
 
   return {
     presets: [
-      ...form8ionPreset.presets,
-      ...react && false !== emotion ? ['@emotion/babel-preset-css-prop'] : []
+      [env, envConfig],
+      ...react ? [
+        require('@babel/preset-react'),
+        ...emotion ? ['@emotion/babel-preset-css-prop'] : []
+      ] : []
     ],
     plugins: [
-      ...form8ionPreset.plugins,
-      ...react ? ['polished'] : [],
-      ...immutable
-        ? [[require('babel-plugin-extensible-destructuring').default, {mode: 'optout', impl: 'immutable'}]]
-        : []
+      [restSpread, {useBuiltIns: true}],
+      ...react ? [
+        require('@babel/plugin-proposal-class-properties'),
+        require('babel-plugin-inline-react-svg').default,
+        'polished'
+      ] : [],
+      ...immutable ? [
+        [require('babel-plugin-extensible-destructuring').default, {mode: 'optout', impl: 'immutable'}]
+      ] : []
     ]
   };
 }

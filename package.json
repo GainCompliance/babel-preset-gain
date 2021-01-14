@@ -52,9 +52,13 @@
     "travis-lint": "^1.0.0"
   },
   "dependencies": {
-    "@babel/core": "^7.4.3",
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.12.1",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "babel-plugin-inline-react-svg": "^1.1.2",
     "@emotion/babel-preset-css-prop": "^11.0.0",
-    "@form8ion/babel-preset": "1.6.41",
     "babel-plugin-extensible-destructuring": "^4.2.3",
     "babel-plugin-polished": "^1.1.0",
     "extensible-runtime": "^4.1.0"
