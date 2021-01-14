@@ -2,7 +2,7 @@ import env from '@babel/preset-env';
 import restSpread from '@babel/plugin-proposal-object-rest-spread';
 
 export default function gainCompliancePreset(context, options = {}) {
-  const {react, immutable, emotion, targets = {}, modules = 'auto'} = options;
+  const {react, immutable, emotion = true, targets = {}, modules = 'auto'} = options;
 
   const envConfig = {
     targets: {
