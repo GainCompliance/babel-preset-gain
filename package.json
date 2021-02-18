@@ -60,7 +60,7 @@
     "@babel/preset-react": "^7.12.10",
     "@emotion/babel-preset-css-prop": "^11.0.0",
     "babel-plugin-extensible-destructuring": "^4.2.3",
-    "babel-plugin-inline-react-svg": "^1.1.2",
+    "babel-plugin-inline-react-svg": "^2.0.0",
     "babel-plugin-polished": "^1.1.0",
     "extensible-runtime": "^4.1.0"
   }
